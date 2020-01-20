@@ -26,3 +26,8 @@ predicted = classifier.predict(X_test)
 
 # check accuracy
 print(accuracy_score(predicted, y_test))
+
+import pickle
+with open('/home/trolaf/Desktop/projects/deploying_machine_learning_models/srf.pkl', 'wb') as model_pkl:
+    pickle.dump(classifier, model_pkl, protocol=2)
+    
